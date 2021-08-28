@@ -1,0 +1,71 @@
+.clients {
+    padding: 100px 0;
+    background-color: $white-dark;
+
+    @include respond-to('tablet') {
+        padding: 70px 0;
+    }
+
+     @include respond-to('mobile') {
+        padding: 50px 0;
+    }
+
+    &__title {
+        margin-bottom: 70px;
+        color: $blue-logo;
+        text-align: center;
+
+        @include respond-to('tablet') {
+        margin-bottom: 40px;
+        }
+
+        @include respond-to('mobile') {
+        margin-bottom: 20px;
+        }
+    
+        &_name {
+            font-size: 50px;
+            font-weight: 300;
+            font-style: normal; 
+            // font-family: $lato;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__item {
+        &_link-msft {
+            display: block;
+            padding: 10px 45px;
+
+            
+        }
+
+        &_link-samsung {
+            display: block;
+            padding: 10px 70px 10px 45px ;
+
+            @include respond-to('mobile') {
+            padding: 10px 0;
+            }
+
+        }
+
+        &_link-ibm {
+            display: block;
+            padding: 10px 60px 10px 70px ;
+        }
+
+         &_link-google {
+            display: block;
+            padding: 10px 50px 0 60px ;
+        }
+    }
+
+
+
+}

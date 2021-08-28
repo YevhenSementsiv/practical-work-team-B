@@ -5,26 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="scr/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
     <script src="src/js/main.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
+            <div class="header__row">
+                <div class="header__text">
+                    <p>
+                        This site uses cookies, so that my service can work better.
+                    </p>
+                </div>
+                <div class="header__item">
+                    <a href="#" class="header__link">Accept</a>
+                </div>
+            </div>
 
         </div>
     </header>
     <main class="main">
-        <section class="hero">
+        <section class="clients">
             <div class="container">
-                
+                <div class="clients__title">
+                    <h1 class="clients__title clients__title_name">Clients</h1>
+                </div>
+                <div class="clients__row">
+                    <div class="clients__item">
+                        <a href="#" class="clients__item clients__item_link-msft">
+                            <img src="scr/scss/image/MSFT_logo_png.png" alt="logo-msft">
+                        </a>
+                    </div>
+                    <div class="clients__item">
+                        <a href="#" class="clients__item clients__item_link-samsung">
+                            <img src="scr/scss/image/Samsung-logo-2015-Nobg.png" alt="logo-sumsung">
+                        </a>
+                    </div>
+                    <div class="clients__item">
+                        <a href="#" class="clients__item clients__item_link-ibm">
+                            <img src="scr/scss/image/ibm_logo.png" alt="logo-ibm">
+                        </a>
+                    </div>
+                    <div class="clients__item">
+                        <a href="#" class="clients__item clients__item_link-google">
+                            <img src="scr/scss/image/Google_2015_logo.svg.png" alt="logo-google">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" style="background-image: url('scr/scss/image/background.png');">
         <div class="container">
-
+            <div class="footer__row">
+                <div class="footer__text">
+                    <p>Need a graphic designer? <b>Ready to work!</b></p> 
+                </div>
+                <a href="#" class="footer__link">
+                    hire me
+                </a>
+            </div>
         </div>
     </footer>
 </body>
