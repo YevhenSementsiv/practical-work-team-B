@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "icons";
+@import "mixins";
 @import "blocks/header";
 @import "pages/page/index";
 @import "blocks/footer";
@@ -12,6 +13,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: $lato;
 }
 h1 {
     margin: 0;
