@@ -1,4 +1,9 @@
 $breakpoints: (
+<<<<<<< HEAD
+=======
+    'desktop': 1200px,
+    'laptop': 1024px,
+>>>>>>> gerasimovich
     'tablet':  768px,
     'mobile': 375px,
 );
@@ -10,7 +15,11 @@ $breakpoints: (
     }
 
     @else {
+<<<<<<< HEAD
         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+=======
+        @warn "Unfortunately, no value could be retrieved from #{$breakpoint}. "
+>>>>>>> gerasimovich
         + "Available breakpoints are: #{map-keys( $breakpoints )}.";
     }
 }
