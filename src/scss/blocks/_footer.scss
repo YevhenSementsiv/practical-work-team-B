@@ -1,3 +1,52 @@
 .footer {
+    padding: 90px 0;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     
+    &__text {
+        color: $white;
+        font-size: 50px;
+        font-weight: 300;
+        font-style: normal;
+        padding-bottom: 15px;
+
+        @include respond-to('tablet') {
+        font-size: 35px;
+        }
+
+        @include respond-to('mobile') {
+        font-size: 20px;
+        }
+    }
+
+    &__link {
+        display: block;
+        border-radius: 25px;
+        background-color: $white;
+        padding: 20px 70px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $blue-light;
+        font-size: 16px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 30px;
+
+        @include respond-to('tablet') {
+        font-size: 15px;
+        }
+
+        @include respond-to('mobile') {
+        font-size: 13px;
+        padding: 10px 35px;
+        }
+
+        &:hover{
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+    }   
 }

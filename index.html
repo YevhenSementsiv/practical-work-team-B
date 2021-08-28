@@ -22,6 +22,66 @@
                     <a href="#" class="header__link">Accept</a>
                 </div>
             </div>
+            <div class="header__button-menu">
+                <i class="icon-menu"></i>
+            </div>
+            <div class="header__popup-holder">
+                <div class="header__popup">
+                    <button type="submit" class="header__button-close">
+                        <i class="icon-close"></i>
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__list-item">
+                                <a href="#about" class="header__link-nav">About Me</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#expert" class="header__link-nav">Services</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#works" class="header__link-nav">My Works</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#clients" class="header__link-nav">Clients</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="header__social-list">
+                        <li class="header__social-list-item">
+                            <a href="#" target="blank" class="header__social-link">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="header__social-list-item">
+                            <a href="#" target="blank" class="header__social-link">
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="header__social-list-item">
+                            <a href="#" target="blank" class="header__social-link">
+                                <i class="icon-dribbble"></i>
+                            </a>
+                        </li>
+                        <li class="header__social-list-item">
+                            <a href="#" target="blank" class="header__social-link">
+                                <i class="icon-behance"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header__lang-holder">
+                        <select name="lang" id="select-lang" class="header__select">
+                            <option value="1">
+                                ENG
+                            </option>
+                            <option value="2">
+                                UKR
+                            </option>
+                        </select>
+                        <img src="src/img/gb.png" alt="img descr" class="header__select-img active">
+                        <img src="src/img/ua.png" alt="img descr" class="header__select-img">
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -44,24 +104,26 @@
                 </div>
             </div>
         </section>
-        <section class="welcome">
+        <section class="welcome" style="background-image: url('src/img/welcome-bg.png');">
             <div class="container">
-                <div class="welcome__hole"></div>
-                <div class="welcome__text-first">
-                    <b >
-                        free portfolio PSD template
-                        FOR GRAPHIC designerS
-                    </b>
+                <div class="welcome__holder">
+                    <div class="welcome__hole-border">
+                        <div class="welcome__hole"></div>
+                    </div>
+                    <h2 class="welcome__title">free portfolio PSD template FOR GRAPHIC designerS</h2>
+                    <div class="welcome__text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                        </p>
+                    </div>
+                    <a href="#" target="blank" class="welcome__btn-link">HIRE ME</a>
+                    <a href="#about"  class="welcome__scroll">
+                        <i class="icon-arrow-thin-down"></i>
+                    </a>
                 </div>
-                <div class="welcome__text-second">
-                    <p >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                    </p>
-                </div>
-                <button class="welcome__btn" type="submit">HIRE ME</button>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__title-holder">
                     <h1 class="about__title">About Me</h1>
@@ -73,7 +135,7 @@
                 </div>
             </div>
         </section>
-        <section class="expert">
+        <section class="expert" id="expert">
             <div class="container">
                 <div class="expert__holder">
                     <h2 class="expert__title">Expert In</h2>
@@ -148,7 +210,7 @@
                 </div>
             </div>
         </section>
-        <section class="latest-works">
+        <section class="latest-works" id="works">
             <div class="container">
                 <div class="latest-works__holder">
                     <div class="latest-works__content">
@@ -183,7 +245,7 @@
                 </div>
             </div>
         </section>
-        <section class="clients">
+        <section class="clients" id="clients">
             <div class="container">
                 <div class="clients__title">
                     <h1 class="clients__title clients__title_name">Clients</h1>
@@ -191,7 +253,7 @@
                 <div class="clients__row">
                     <div class="clients__item">
                         <a href="#" class="clients__item clients__item_link-msft">
-                            <img src="scr/img/MSFT_logo_png.png" alt="logo-msft">
+                            <img src="src/img/MSFT_logo_png.png" alt="logo-msft">
                         </a>
                     </div>
                     <div class="clients__item">
