@@ -1,0 +1,101 @@
+.expert {
+    padding: 100px 0 110px;
+    background-color: $lightcyan;
+    @include respond-to('tablet') {
+        padding: 50px 0 60px;
+    }
+    @include respond-to('mobile') {
+        padding: 30px 0 40px;       
+    }
+    &__title {
+        text-align: center;
+        font-size: 50px;
+        background: linear-gradient(45deg, #77a7f3 33%, #3677fd 66%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 110px;
+        @include respond-to('tablet') {
+            font-size: 30px;
+            margin-bottom: 55px;
+        }
+        @include respond-to('mobile') {
+            font-size: 25px;
+            margin-bottom: 40px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__list-item {
+        max-width: 30%;
+        margin-bottom: 95px;
+        @include respond-to('tablet') {
+            margin-bottom: 50px;
+        }
+        @include respond-to('mobile') {
+            margin-bottom: 40px;
+        }
+    }
+    &__img-holder {
+        border-radius: 50%;
+        margin: 0 auto 50px;
+        border: 1px solid $lightgrey;
+        width: 140px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include respond-to('tablet') {
+            margin-bottom: 30px;
+            width: 70px;
+            height: 70px;
+        }
+        @include respond-to('mobile') {
+            margin-bottom: 25px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    &__img {
+        max-width: 100%;
+        display: block;
+        @include respond-to('tablet') {
+            max-width: 40%;
+        }
+        @include respond-to('mobile') {
+            max-width: 30%;
+        }
+    }
+    &__subtitle {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        color: $cyan;
+        margin-bottom: 30px;
+        @include respond-to('tablet') {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        @include respond-to('mobile') {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        color: $darkgrey;
+        line-height: 220%;
+        @include respond-to('tablet') {
+            font-size: 14px;
+            line-height: 170%;
+        }
+        @include respond-to('mobile') {
+            font-size: 12px;
+            line-height: 150%;
+        }
+    }
+}
