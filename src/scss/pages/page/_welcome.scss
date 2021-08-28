@@ -1,0 +1,49 @@
+.welcome {
+    background-color: $blue-welcome;
+    color: $white;
+    text-align: center;
+    margin: 0 auto;
+
+    .container {
+        width: 70%;
+        padding-top: 165px;
+        position: relative;
+    }
+
+    &__hole {
+        width: 190px;
+        height: 190px;
+        background-color: $white;
+        border: 20px solid #589BFE;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+     &__text-first {
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-top: 57px;
+    }
+
+    &__text-second {
+        font-size: 16px;
+        font-weight: 300;
+        padding-top: 42px;
+    }
+
+    &__btn {
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 30px;
+        background-color: $white;
+        margin-top: 80px;
+        margin-bottom: 150px;
+        width: 210px;
+        height: 60px;
+        color: $blue-btn-text;
+        border-color: $blue-welcome;
+    }
+}
