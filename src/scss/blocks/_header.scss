@@ -3,32 +3,28 @@
     background-color: $dark-blue;
     position: fixed;
     width: 100%;
+    z-index: 6;
     &__row {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-
     &__text {
         color: $white;
         font-size: 14px;
         font-weight: 400;
         font-style: normal;
         padding: 0 25px;
-
         @include respond-to('tablet') {
         padding: 0 0 20px;
         }
-
         @include respond-to('mobile') {
         padding: 0 0 20px;
         }
     }
-
     &__item {
         padding: 0 25px;
     }
-
     &__link {
         padding: 10px 35px;
         background-color: $white;
@@ -38,39 +34,61 @@
         font-size: 12px;
         font-weight: 700;
         font-style: normal;
-
         &:hover {
             box-shadow: 0 2px 5px 2px rgb(0, 0, 0, .5);
             transition: box-shadow linear .2s;
         }
     }
-
-    &__button-menu {
+    &__link-menu {
         position: fixed;
-        top: 100px;
+        top: 90px;
         right: 15px;
         position: fixed;
         cursor: pointer;
         font-size: 25px;
         color: $white;
+        text-decoration: none;
         text-shadow: 1px 4px 3px rgba(0, 0, 0, 80%);
     }
-    
-    &__popup-holder {
-        display: none;
+    &__popup {
         position: fixed;
-        top: 85px;
-        left: 0%;
         width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        z-index: 5;
+        padding: 75px 0 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition: all 0.6s ease 0s;
+        &:target {
+            opacity: 1;
+            visibility: visible;
+        }
+        &:target .header__popup-holder {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+    &__popup-holder {
+        max-width: 1170px;
+        margin: 0 auto;
         background-color: $white;
         border-radius: 2%;
-        z-index: 5;
-        padding: 85px 0 0;
+        padding: 75px 0 40px;
+        position: relative;
+        opacity: 0;
+        transform: translateX(+100%);
+        transition: all 0.6s ease 0s;
     }
-    &__button-close {
+    &__link-close {
         padding: 0;
         border: none;
         outline: none;
+        text-decoration: none;
         background-color: $white;
         position: absolute;
         top: 15px;
@@ -82,7 +100,7 @@
     &__list {
         border-bottom: 1px solid #d2d2d2;
         max-width: 420px;
-        margin: 0 auto 65px;
+        margin: 0 auto 55px;
     }
     &__list-item {
         max-width: 360px;
@@ -106,7 +124,7 @@
     }
     &__social-list {
         max-width: 360px;
-        margin: 0 auto 60px;
+        margin: 0 auto 40px;
         display: flex;
         justify-content: space-evenly;
     }

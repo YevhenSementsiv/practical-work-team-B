@@ -37,6 +37,7 @@
         }
         @include respond-to('mobile') {
             margin-bottom: 40px;
+            max-width: 45%;
         }
     }
     &__img-holder {
