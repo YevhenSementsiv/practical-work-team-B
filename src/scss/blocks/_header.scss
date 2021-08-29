@@ -95,7 +95,7 @@
         top: 15px;
         right: 10px;
         font-size: 25px;
-        color: $cyan;
+        color: $blue;
 
         @include respond-to('tablet') {
             font-size: 23px;
@@ -156,7 +156,7 @@
         font-size: 50px;
 
         &:hover {
-            color: $cyan;
+            color: $blue;
             transition: color linear .2s;
         }
 

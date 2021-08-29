@@ -1,9 +1,9 @@
 .clients {
     padding: 100px 0;
-    background-color: $white-dark;
+    background-color: $darkwhite;
 
     @include respond-to('tablet') {
-        padding: 70px 0;
+        padding: 70px 0 50px;
     }
 
      @include respond-to('mobile') {
@@ -12,53 +12,47 @@
 
     &__title {
         margin-bottom: 70px;
-        color: $blue-logo;
+        color: $blue;
         text-align: center;
+        font-size: 50px;
+        font-weight: 300;
+        background: linear-gradient(to right, rgb(101, 144, 236) 0%,rgb(102, 143, 231) 51%,rgb(32, 34, 173) 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         @include respond-to('tablet') {
-        margin-bottom: 40px;
+            margin-bottom: 40px;
         }
 
         @include respond-to('mobile') {
-        margin-bottom: 20px;
-        }
-    
-        &_name {
-            font-size: 50px;
-            font-weight: 300;
-            font-style: normal; 
+            margin-bottom: 20px;
         }
     }
 
-    &__row {
+    &__list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
     }
 
-    &__item {
-        &_link-msft {
-            display: block;
-            padding: 10px 45px;
+    &__list-item {
+        padding: 0 15px;
+
+        @include respond-to('tablet') {
+            width: 50%;
+            margin-bottom: 35px;
         }
 
-        &_link-samsung {
-            display: block;
-            padding: 10px 70px 10px 45px ;
-
-            @include respond-to('mobile') {
-            padding: 10px 0;
-            }
-
+        @include respond-to('mobile') {
+            margin-bottom: 20px;
         }
-        &_link-ibm {
-            display: block;
-            padding: 10px 60px 10px 70px ;
-        }
+    }
 
-         &_link-google {
-            display: block;
-            padding: 10px 50px 0 60px ;
-        }
+    &__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        filter: grayscale(1) opacity(0.4);
     }
 }

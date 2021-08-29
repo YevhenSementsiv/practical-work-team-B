@@ -1,33 +1,49 @@
 .about {
-    background-color: #fff;
-    margin-bottom: 120px;
-    padding-top: 100px;
+    background-color: $white;
+    padding: 100px 0 120px;
+
+    @include respond-to('tablet') {
+        padding: 80px 0 90px;
+    }
+
+    @include respond-to('mobile') {
+        padding: 50px 0 70px;
+    }
+
     &__title {
         text-align: center;
         color: #3680FE;
         font-size: 50px;
         font-weight: 300;
         margin-bottom: 70px;
-        background: linear-gradient(45deg, #3677fd 33%, #0d3e8b 66%);
+        background: linear-gradient(to right, rgb(101, 144, 236) 0%,rgb(102, 143, 231) 51%,rgb(32, 34, 173) 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
         @include respond-to('tablet') {
             margin-bottom: 50px;
+            font-size: 45px;
         }
+
         @include respond-to('mobile') {
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+            font-size: 35px;
         }
     }
+
     &__text-holder {
         font-size: 16px;
         text-align: center;
-        line-height: 35px;
-        color: #5a5a5a;
+        line-height: 220%;
+        color: $darkgrey;
+
         @include respond-to('tablet') {
-            margin-bottom: 50px;
+            line-height: 180%;
         }
+
         @include respond-to('mobile') {
-            margin-bottom: 40px;
+            font-size: 14px;
+            line-height: 150%;
         }
     }
 }
