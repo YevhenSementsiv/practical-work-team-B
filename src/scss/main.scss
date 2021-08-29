@@ -14,6 +14,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: $lato;
+    &.lock {
+        overflow: hidden;
+    }
 }
 h1 {
     margin: 0;

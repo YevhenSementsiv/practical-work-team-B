@@ -12,20 +12,11 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__row">
-                <div class="header__text">
-                    <p>
-                        This site uses cookies, so that my service can work better.
-                    </p>
-                </div>
-                <div class="header__item">
-                    <a href="#" class="header__link">Accept</a>
-                </div>
-            </div>
             <a href="#header-popup" class="header__link-menu">
                 <i class="icon-menu"></i>
             </a>
             <div id="header-popup" class="header__popup">
+                <a href="##" class="header__popup-area"></a>
                 <div class="header__popup-holder">
                     <div class="header__popup-content">
                         <a href="##" class="header__link-close">
@@ -87,48 +78,58 @@
         </div>
     </header>
     <main class="main">
-        <section class="hire">
-            <div class="container">
-                <div class="hire__holder">
-                    <button type="submit" class="hire__button-close">
-                        <i class="icon-close"></i>
-                    </button>
-                    <h2 class="hire__title">Hire Me</h2>
-                    <form action="#" class="hire__form">
-                        <input type="text" placeholder="Your Name" class="hire__input">
-                        <input type="email" placeholder="Your E-Mail"  class="hire__input">
-                        <textarea name="text" id="textarea" cols="30" rows="8" placeholder="Your Message"  class="hire__input"></textarea>
-                        <button type="submit" class="hire__button-form">SEND MESSAGE</button>
-                    </form>
-                </div>
-            </div>
-        </section>
         <section class="welcome" style="background-image: url('src/img/welcome-bg.png');">
             <div class="container">
+                <div class="cookies">
+                    <form class="cookies__form">
+                        <label for="cookies-button" class="cookies__label">
+                            This site uses cookies, so that my service can work better.
+                        </label>
+                        <button id="cookies-button" type="button" class="cookies__button">
+                            Accept
+                        </button>
+                    </form>
+                </div>
                 <div class="welcome__holder">
                     <div class="welcome__hole-border">
                         <div class="welcome__hole"></div>
                     </div>
-                    <h2 class="welcome__title">free portfolio PSD template FOR GRAPHIC designerS</h2>
+                    <h1 class="welcome__title">free portfolio PSD template FOR GRAPHIC designerS</h1>
                     <div class="welcome__text">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
                         </p>
                     </div>
-                    <a href="#" target="blank" class="welcome__btn-link">HIRE ME</a>
-                    <a href="#about"  class="welcome__scroll">
+                    <a href="#" class="welcome__btn-link">HIRE ME</a>
+                    <a href="#about" class="welcome__scroll">
                         <i class="icon-arrow-thin-down"></i>
                     </a>
+                </div>
+                <div class="form-popup">
+                    <div class="form-popup__close-area"></div>
+                    <div class="form-popup__holder">
+                        <div class="form-popup__close">
+                            <i class="icon-close"></i>
+                        </div>
+                        <h2 class="form-popup__title">Hire Me</h2>
+                        <form action="#" class="form-popup__form">
+                            <input type="text" placeholder="Your Name" class="form-popup__input" required>
+                            <input type="email" placeholder="Your E-Mail"  class="form-popup__input" required>
+                            <textarea name="text" cols="30" rows="8" placeholder="Your Message" class="form-popup__input" required></textarea>
+                            <button type="submit" class="form-popup__button">SEND MESSAGE</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="about" id="about">
             <div class="container">
                 <div class="about__title-holder">
-                    <h1 class="about__title">About Me</h1>
+                    <h2 class="about__title">About Me</h2>
                 </div>
                 <div class="about__text-holder">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
                         esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
                     </p>
                 </div>

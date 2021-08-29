@@ -1,55 +1,29 @@
 .header {
-    padding: 30px 0;
-    background-color: $dark-blue;
-    position: fixed;
-    width: 100%;
-    z-index: 6;
-    &__row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    &__text {
-        color: $white;
-        font-size: 14px;
-        font-weight: 400;
-        font-style: normal;
-        padding: 0 25px;
-        @include respond-to('tablet') {
-        padding: 0 0 20px;
-        }
-        @include respond-to('mobile') {
-        padding: 0 0 20px;
-        }
-    }
-    &__item {
-        padding: 0 25px;
-    }
-    &__link {
-        padding: 10px 35px;
-        background-color: $white;
-        text-decoration: none;
-        border-radius: 13px;
-        color: $dark-blue;
-        font-size: 12px;
-        font-weight: 700;
-        font-style: normal;
-        &:hover {
-            box-shadow: 0 2px 5px 2px rgb(0, 0, 0, .5);
-            transition: box-shadow linear .2s;
-        }
-    }
+
     &__link-menu {
         position: fixed;
-        top: 90px;
+        top: 100px;
         right: 15px;
         position: fixed;
-        cursor: pointer;
         font-size: 25px;
         color: $white;
         text-decoration: none;
         text-shadow: 1px 4px 3px rgba(0, 0, 0, 80%);
+
+        &.go-up {
+            top: 25px;
+            transition: all .3s ease 0s;
+        }
+        
+        @include respond-to('tablet') {
+            top: 80px;
+        }
+    
+        @include respond-to('mobile') {
+            top: 80px;
+        }
     }
+
     &__popup {
         position: fixed;
         width: 100%;
@@ -58,32 +32,59 @@
         top: 0;
         left: 0;
         z-index: 5;
-        padding: 75px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         opacity: 0;
         visibility: hidden;
         overflow-x: hidden;
         overflow-y: auto;
         transition: all 0.6s ease 0s;
+
         &:target {
             opacity: 1;
             visibility: visible;
         }
+
         &:target .header__popup-holder {
             transform: translateX(0px);
             opacity: 1;
         }
     }
+
+    &__popup-area {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
     &__popup-holder {
         max-width: 1170px;
+        width: 100%;
+        max-height: 700px;
+        height: 100%;
         margin: 0 auto;
         background-color: $white;
         border-radius: 2%;
-        padding: 75px 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
         opacity: 0;
         transform: translateX(+100%);
         transition: all 0.6s ease 0s;
+
+        @include respond-to('tablet') {
+            max-height: 600px;
+        }
+
+        @include respond-to('mobile') {
+            max-height: 450px; 
+        }
     }
+
     &__link-close {
         padding: 0;
         border: none;
@@ -93,22 +94,58 @@
         position: absolute;
         top: 15px;
         right: 10px;
-        cursor: pointer;
         font-size: 25px;
         color: $cyan;
+
+        @include respond-to('tablet') {
+            font-size: 23px;
+        }
+
+        @include respond-to('mobile') {
+            font-size: 20px;
+        }
     }
+
     &__list {
         border-bottom: 1px solid #d2d2d2;
         max-width: 420px;
         margin: 0 auto 55px;
+        padding: 0 25px;
+
+        @include respond-to('tablet') {
+            max-width: 320px;
+            margin: 0 auto 45px;
+        }
+
+        @include respond-to('mobile') {
+            max-width: 200px;
+            margin: 0 auto 25px;
+        }
     }
+
     &__list-item {
         max-width: 360px;
         margin: 0 auto 45px;
+
         &:last-child {
             margin-bottom: 65px;
         }
+
+        @include respond-to('tablet') {
+            max-width: 260px;
+            margin: 0 auto 35px;
+        }
+
+        @include respond-to('mobile') {
+            max-width: 180px;
+            margin: 0 auto 15px;
+
+            &:last-child {
+                margin-bottom: 25px;
+            }
+        }
     }
+
     &__link-nav {
         text-decoration: none;
         display: block;
@@ -117,17 +154,28 @@
         color: #d2d2d2;
         font-weight: 300;
         font-size: 50px;
+
         &:hover {
             color: $cyan;
             transition: color linear .2s;
         }
+
+        @include respond-to('tablet') {
+            font-size: 45px;
+        }
+
+        @include respond-to('mobile') {
+            font-size: 30px;
+        }
     }
+
     &__social-list {
         max-width: 360px;
         margin: 0 auto 40px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
+
     &__social-link {
         width: 55px;
         height: 55px;
@@ -139,11 +187,25 @@
         text-decoration: none;
         font-size: 30px;
         color: $white;
+
         &:hover {
             background: linear-gradient(45deg, #5c89d1 33%, #5571ee 66%);
-            transition: background linear .2s;
+            transition: all linear .3s;
+        }
+
+        @include respond-to('tablet') {
+            font-size: 25px;
+            width: 45px;
+            height: 45px;
+        }
+
+        @include respond-to('mobile') {
+            font-size: 20px;
+            width: 35px;
+            height: 35px;
         }
     }
+
     &__lang-holder {
         position: absolute;
         bottom: 15px;
@@ -151,6 +213,7 @@
         display: flex;
         justify-content: space-between;
     }
+
     &__select {
         border: none;
         outline: none;
@@ -158,13 +221,32 @@
         font-weight: 400;
         font-size: 16px;
         color: #d2d2d2;
+        cursor: pointer;
+
+        @include respond-to('tablet') {
+            font-size: 14px;
+        }
+
+        @include respond-to('mobile') {
+            font-size: 12px;
+        }
     }
+
     &__select-img {
         display: none;
+        height: 16px;
+
         &.active {
             max-width: 100%;
-            height: 16px;
             display: block;
+        }
+
+        @include respond-to('tablet') {
+            height: 14px;
+        }
+
+        @include respond-to('mobile') {
+            height: 12px;
         }
     }
 }
