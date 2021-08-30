@@ -343,6 +343,8 @@
         }
     }
 
+
+
     &__button {
         width: 205px;
         padding: 20px;
@@ -364,6 +366,7 @@
             transform: scale(0.9);
             transition: transform linear .2s;
         }
+
 
         @include respond-to('tablet') {
             width: 170px;

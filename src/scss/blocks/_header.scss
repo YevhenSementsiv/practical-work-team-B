@@ -233,12 +233,10 @@
     }
 
     &__select-img {
-        display: none;
-        height: 16px;
+        max-width: 100%;
 
-        &.active {
-            max-width: 100%;
-            display: block;
+        &_ukr {
+            display: none;
         }
 
         @include respond-to('tablet') {
